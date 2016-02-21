@@ -9,6 +9,7 @@ license:      "BSD2"
 
 build: [
   [ "./configure" "--prefix" prefix
+    "--enable-tests"
     "--%{lwt:enable}%-lwt"
     "--%{mirage-types-lwt+ipaddr:enable}%-mirage" ]
   [ make ]
